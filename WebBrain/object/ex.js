@@ -1,0 +1,234 @@
+//1.objectni ichida tada bolsa false bomasa true vhiqarsin
+
+// let schedule = {}
+// schedule["8:30"] = "get up"
+// console.log(schedule["8:30"])
+
+// function isEmpty(param) {
+//   for (let i in param) {
+//     if (i === "" || param[i] === "") {
+//       return console.log("true")
+//     }
+//   }
+//   return console.log("false")
+// }
+// alert(isEmpty(schedule)) // true. topomadim
+
+//2. tartibi bilan chiqsin obshiy si chiqsin.   // buni topolmadim                            yechildi
+//obshiy qiymati chiqsin
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// }
+// let sum = 0
+// for (let i in salaries) {
+//   sum += salaries[i]
+// }
+// console.log(sum)
+
+//3.create a function multiplyNumeric(obj)
+//that miltiplies all numeric property values of obj by 2
+//objec tni ichidagi valular number bolsa 2ga kopaysin bolmasa oz xolida qolsin             yechildi
+
+//before the call:
+//////////////////////////////////
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "my menu",
+// }
+
+// let menuClone = new Object()
+
+// for (const key in menu) {
+//   if (!isNaN(menu[key])) {
+//     menuClone[key] = menu[key] * 2
+//   } else {
+//     menuClone[key] = menu[key]
+//   }
+// }
+// console.log(menuClone)
+///////////////////////////////////
+
+/////////////////object/////////////////
+//No1
+//object keylarini toping
+// let obj = {
+//   id: 1,
+//   name: "WebBrain",
+// }
+//chiqish
+//id,name
+// for (let key in obj) {
+//   console.log(key)
+// }
+////////////////////////////////////////////////////////////////
+//No2 object valuelarining raqamga tenglarini toping
+
+// let obj = {
+//   id: 1,
+//   // id: "one",
+//   name: "WebBrain",
+// }
+
+// for (let key in obj) {
+//   if (typeof obj[key] === "number") {
+//     console.log(key)
+//   }
+// }
+
+////////////////////////////////////////////////////////////////
+// No3
+// object valuelarining boolean tipidagi malumotlrini qaytaring keylari bn biriga
+// let obj = {
+//   id: 1,
+//   name: "WebBrain",
+//   offline: true,
+//   online: true,
+//   individual: false,
+// }
+
+// for (let key in obj) {
+//   if (typeof obj[key] === "boolean") {
+//     console.log(`${key}: ${obj[key]}`)
+//   }
+// }
+// chiqish
+// {   offline:true,
+//     online:true,
+//     individual:false
+// }
+////////////////////////////////////////////////////////////////
+// No4
+// object va string berilgan .agar object keylari ichida stringga teng bolgan key bolsa shu key va valueni chiqazing
+// let obj = {
+//   id: 1,
+//   name: "WebBrain",
+//   offline: true,
+//   online: true,
+//   individual: false,
+// }
+
+// //chiqish
+// //name: "WebBrain"
+// //
+
+// //javob:
+// obj.student = "jamshid"
+// function Search(obj, str) {
+//   for (let key in obj) {
+//     if (typeof obj[key] === "string" && obj[key] === str) {
+//       console.log(`${key}: ${obj[key]}`)
+//     }
+//   }
+// }
+// Search(obj, "WebBrain")
+// Search(obj, "jamshid")
+
+////////////////////////////////////////////////////////////////
+// No5
+// object va string berilgan.  string bor bolgan object valuelarining chiqaring
+// let obj = {
+//   id: 1,
+//   name: "atirgul",
+//   color: "qizil",
+//   count: 10,
+//   price: "10$",
+// }
+
+// //javob
+
+// const searchValue = (obj) => {
+//   for (let key in obj) {
+//     if (typeof obj[key] === "string") {
+//       console.log(obj[key])
+//     }
+//   }
+// }
+
+// searchValue(obj)
+//searchValue(obj,'i') => atirgul,qizil
+////////////////////////////////////////////////////////////////
+// No7
+// array berilgan array ning ichida objectlar berilgan. object ichida age berilgan. age ni 18dan katta bolgan objectlarni qaytaring               array haqida
+// let user = {
+//     id: 1,
+//     name: 'Odil',
+//     age: 78,
+//     children: [
+//         {
+//             id: 1,
+//             name: 'Umar',
+//             age: 54,
+//             children: [
+//                 { id: 1, name: 'Asmo', age: 34 },
+//                 { id: 2, name: 'Osim', age: 30 },
+//                 { id: 3, name: 'Xattob', age: 25 },
+//             ]
+//         },
+//         { id: 2, name: 'Umar', age: 54 },
+//         { id: 3, name: 'Umar', age: 54 },
+//     ]
+// }
+////////////////////////////////////////////////////////////////
+// No8
+// array ichida object berilgan. job berilgan objectlarni qaytaring                                                                    array haqida
+// let arr=[
+//     {id:1,name:'Usmon',job:'developer'},
+//     {id:2,name:'Usmon',job:'developer'},
+//     {id:3,name:'Usmon'},
+//     {id:4,name:'Usmon',job:'developer'},
+//     {id:5,name:'Usmon'}
+// ]
+////////////////////////////////////////////////////////////////
+// No9
+// objectdan clone oling birinchi objni o'zgartirsa ikkinchisi malumotlari ozgarmasligi kk
+// let obj = {
+//   id: 1,
+//   name: "Usmon",
+//   job: "developer",
+// }
+// let obj2 = structuredClone(obj)
+// let obj3 = {}
+// Object.assign(obj3, obj)
+// obj.id = 2
+// obj.name = "Jamshid"
+// console.log(obj)
+// console.log(obj2)
+// console.log(obj3)
+////////////////////////////////////////////////////////////////
+// No10
+// objectga yangi qiymat qo'shuvchi funksiya yozing
+// let obj = {}
+// function add(obj, key, value) {
+//   obj[key] = value
+//   return obj
+// }
+// console.log(add(obj, "address", "toshkent"))
+// console.log(obj)
+
+////////////////////////////////////////////////////////////////
+// No11
+// agar object ichida practice 1 dan katta bolsa 'qabul qilindi'.aks holda 'ming bor uzur.'
+// let obj = {
+//   id: 1,
+//   name: "Usmon",
+//   job: "developer",
+//   practice: 1,
+// }
+// obj.practice = 0
+
+// const check = (obj) => {
+//   if (obj.practice > 1) {
+//     console.log("qabul qlindi")
+//   } else {
+//     console.log("reject")
+//   }
+// }
+// check(obj)
+
+// chiqish
+// qabul qilindi
+////////////////////////////////////////////////////////////////
